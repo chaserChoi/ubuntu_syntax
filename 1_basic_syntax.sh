@@ -37,7 +37,6 @@ cd
 
 # 상대 경로 & 절대 경로
 # 상대 경로: cd ../../
-<<<<<<< HEAD
 # 절대 경로: cd/home/jaehyeok_choi
 
 # 비어있는 파일 만들기
@@ -105,6 +104,3 @@ find . -name "first*" -type f -exec grep -rni "hello" {} \;
 
 # 활용
 find -name "*.txt" -exec cp {} ./test \; # 현재 디렉토리로 복사
-=======
-# 절대 경로: cd/home/jaehyeok_choi
->>>>>>> parent of edefc75 (05-20 linux2)
