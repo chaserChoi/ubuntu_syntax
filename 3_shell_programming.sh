@@ -1,10 +1,11 @@
 # 쉘 스크립트 작성 : 반드시 확장자 .sh
+# 쉘 명령어 조합 -> 스크립트 자동화 
 touch myscript.sh
 nano myscript.sh
 echo "hello world'"
 chmod u+x myscript.sh
 
-# 스크립트 실행
+# 스크립트 실행 => './' 무조건 붙일 것
 ./myscript.sh
 
 ############실습############
@@ -29,14 +30,14 @@ mv file2.txt file2_rename.txt
 echo "script practice end"
 
 # myscript2 생성 후 아래 코드 작성 및 실행 
-# if문
+# if문 (조건문에서 띄어쓰기 주의!)
 if [ 1 -gt 2 ]; then
     echo "hello world1"
 else
     echo "hello world2"
 fi
 
-# 변수 선언 및 파일/디렉토리 검사
+# 변수 선언 및 파일/디렉토리 검사 (띄어쓰기 X)
 file_name=first_file.txt
 if [ -f "$file_name" ]; then
     echo "$first_name exists"

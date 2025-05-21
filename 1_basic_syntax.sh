@@ -91,13 +91,16 @@ cp -r abc ../abc
 grep -rni "hello" .
 
 # find : 이름으로 파일 또는 디렉토리 찾기
-find . -name "*.txt"
+find . -name "*.txt" # . : 현재 위치 
 find . -type f # 찾을 유형
 
-# find & grep 혼용
-find . -name "*.txt" | xargs grep -rni "hello"
-find . -name "*.txt" -exec grep -rni "hello" {} \;
+# find & grep 혼용 2가지 
+find . -name "*.txt" | xargs grep -rni "hello" # 오른쪽 입력값 
+find . -name "*.txt" -exec grep -rni "hello" {} \; # {} : 결과값 
 
 # 타입은 file인 파일 중에 이름은 first로 시작하고 그 파일을 안에 hello 라는 키워드가 들어가 있는 문장 찾기
 find . -name "first*" -type f | xargs grep -rni "hello" 
 find . -name "first*" -type f -exec grep -rni "hello" {} \;
+
+# 활용
+find -name "*.txt" -exec cp {} ./test \; # 현재 디렉토리로 복사
