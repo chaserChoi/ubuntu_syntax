@@ -16,5 +16,3 @@ chmod u=r 파일명  # = : 대체
 
 # 소유자:그룹 변경
 chown newuser1:newuser1 파일명
-
-# 
